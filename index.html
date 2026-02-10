@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeShift Pro | Time Zone Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark"> <header>
+        <div class="logo">
+            <span class="icon">🕒</span> TimeShift <strong>Pro</strong>
+        </div>
+        <nav>
+            <a href="#">Global Clock</a>
+            <a href="#" class="active">Converter</a>
+            <a href="#">Meeting Planner</a>
+            <a href="#">Settings</a>
+        </nav>
+        <div class="header-actions">
+            <button id="darkModeToggle" class="icon-btn">🌙</button>
+            <button class="sign-in-btn">Sign In</button>
+        </div>
+    </header>
+
+    <div class="ad-banner-top">
+        <div class="ad-placeholder">728x90 Leaderboard Banner</div>
+    </div>
+
+    <main>
+        <section class="content-left">
+            <div class="converter">
+                <div class="location-grid">
+                    <div class="input-group">
+                        <label>BASE LOCATION</label>
+                        <input type="text" id="sourceZone" value="New York, USA (EDT)">
+                    </div>
+                    
+                    <button id="swapZones" class="swap-btn">⇄</button>
+                    
+                    <div class="input-group">
+                        <label>TARGET LOCATION</label>
+                        <input type="text" id="targetZone" placeholder="Add another city...">
+                    </div>
+                </div>
+
+                <div class="time-display-section">
+                    <div class="time-header">
+                        <div>
+                            <h2 id="currentTime">12:30 PM</h2>
+                            <p class="date-subtext">Wednesday, Oct 25, 2023</p>
+                        </div>
+                        <div class="time-actions">
+                            <button class="btn-sm">Now</button>
+                            <button class="btn-sm">Clear</button>
+                        </div>
+                    </div>
+
+                    <div class="time-slider-container">
+                        <div class="slider-track">
+                            <div class="slider-progress" style="width: 50%;">
+                                <div class="slider-handle"></div>
+                            </div>
+                        </div>
+                        <div class="slider-labels">
+                            <span>12 AM</span><span>4 AM</span><span>8 AM</span><span>12 PM</span><span>4 PM</span><span>8 PM</span><span>12 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timezone-list">
+                    <div class="timezone-item">
+                        <div class="tz-details">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="UK">
+                            <div>
+                                <h4>London, UK</h4>
+                                <p>BST (UTC+1) • Today</p>
+                            </div>
+                        </div>
+                        <div class="tz-time">
+                            17:30
+                            <span class="badge">+5 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="timezone-item">
+                        <div class="tz-details">
+                            <img src="https://flagcdn.com/w20/jp.png" alt="Japan">
+                            <div>
+                                <h4>Tokyo, Japan</h4>
+                                <p>JST (UTC+9) • Tomorrow</p>
+                            </div>
+                        </div>
+                        <div class="tz-time">
+                            01:30
+                            <span class="badge yellow">Tomorrow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="add-timezone-btn">+ Add another timezone</button>
+            </div>
+
+            <div class="ad-placeholder-rect">
+                Large Rectangular Ad Space (728x250)
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="sidebar-card ad-vertical">
+                <div class="ad-placeholder-v">
+                    300x600<br>Half Page Ad Unit
+                </div>
+            </div>
+
+            <div class="sidebar-card features-card">
+                <h3>✨ Features</h3>
+                <ul>
+                    <li><span>📅</span> Create Calendar Event</li>
+                    <li><span>🔗</span> Share Conversion Link</li>
+                    <li><span>📋</span> Copy to Clipboard</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>TimeShift Pro</h3>
+                <p>The most accurate and professional time zone converter for remote teams. Simplified for efficiency.</p>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 TIMESHFIT PRO INC. ALL RIGHTS RESERVED.</p>
+            <div class="social-links">
+                <a href="#">TWITTER</a>
+                <a href="#">LINKEDIN</a>
+                <a href="#">GITHUB</a>
+            </div>
+        </div>
+    </footer>
+<div class="header-actions">
+    <button id="darkModeToggle" class="icon-btn">🌙</button> <button class="sign-in-btn">Sign In</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

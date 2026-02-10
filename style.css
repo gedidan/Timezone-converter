@@ -1,0 +1,192 @@
+/* 1. DEFINE THE COLOR PALETTES */
+:root {
+    /* Light Mode (Default) */
+    --bg-deep: #f0f2f5;      /* Main background */
+    --bg-card: #ffffff;      /* Card/Container background */
+    --bg-input: #f8fafc;     /* Input field background */
+    --accent-blue: #0077cc;  /* Primary action blue */
+    --text-main: #1e293b;    /* Dark text for light bg */
+    --text-muted: #64748b;   /* Muted labels/subtext */
+    --border: #e2e8f0;       /* Light borders */
+    --ad-stripe: #cbd5e1;    /* Stripe color for ads */
+}
+
+body.dark {
+    /* Dark Mode (Matches your image) */
+    --bg-deep: #0b111b;
+    --bg-card: #161e2b;
+    --bg-input: #0f172a;
+    --accent-blue: #0084ff;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border: #242f3f;
+    --ad-stripe: #1e293b;
+}
+
+/* 2. CORE STYLES (Using the variables) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth fade effect */
+}
+
+header {
+    background-color: var(--bg-deep);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+
+nav a.active {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 20px;
+}
+
+/* Main Layout */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+/* The Converter Card */
+.converter {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Input Styling */
+input, select {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border);
+    color: var(--text-main); /* Dynamically changes color */
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.swap-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/* Time Slider Styling */
+.time-slider-container {
+    margin: 2rem 0;
+    position: relative;
+}
+
+.slider-track {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    position: relative;
+}
+
+.slider-progress {
+    width: 40%; 
+    height: 100%;
+    background: var(--accent-blue);
+    position: relative;
+}
+
+.slider-handle {
+    width: 12px;
+    height: 12px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    box-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* Timezone Results List */
+.timezone-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.timezone-info h4 { font-size: 1.1rem; }
+.timezone-info p { color: var(--text-muted); font-size: 0.85rem; }
+
+/* Sidebar Elements */
+.sidebar-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ad-placeholder {
+    /* Uses the ad-stripe variable to look good in both modes */
+    background: repeating-linear-gradient(45deg, var(--ad-stripe), var(--ad-stripe) 10px, var(--bg-card) 10px, var(--bg-card) 20px);
+    border-radius: 8px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 5%;
+    background-color: var(--bg-deep);
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
